@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                           blurRadius: 10,
                           offset: Offset(0, 4),
                       )
-                    ]// Warna teks
+                    ]
                   ),
                 ),
                 Transform.translate(
@@ -104,13 +104,20 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 22, 
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF275E76), 
+                      shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.2),
+                          blurRadius: 10,
+                          offset: Offset(0, 4),
+                      )
+                    ]
                     ),
                   ),
                 ),
-                SizedBox(height: 20), // Jarak antara teks "Seputar Semarang" dan container
+                SizedBox(height: 12), // Jarak antara teks "Seputar Semarang" dan container
                 Center( // Container dipusatkan
                   child: Container(
-                    width: 350, // Lebar container
+                    width: 370, // Lebar container
                     height: 200, // Tinggi container
                     decoration: BoxDecoration(
                       color: Colors.white, // Warna container putih
