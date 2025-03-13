@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
       extendBody: true,
       body: Stack(
         children: [
-          // Background Image
           Container(
             width: double.infinity,
             height: screenHeight,
@@ -139,6 +138,25 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+  child: Container(
+    width: 130,
+    height: 150,
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(20), 
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.1),
+          blurRadius: 10,
+          spreadRadius: 2,
+          offset: Offset(0, 4),
+        ),
+      ],
+    ),
+  ),
+),
                 ],
               ),
             ),

@@ -12,7 +12,8 @@ class _NavbarState extends State<Navbar> {
 
   static final List<Widget> _pages = [
     HomeScreen(),
-    // Tambahkan halaman lain di sini
+    Center(child: Text("Events Page")),
+    Center(child: Text("Profile Page")),
   ];
 
   void _onItemTapped(int index) {
@@ -27,47 +28,96 @@ class _NavbarState extends State<Navbar> {
       extendBody: true,
       body: _pages[_selectedIndex],
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                blurRadius: 10,
-                spreadRadius: 2,
-                offset: Offset(0, 4),
-              )
-              ],
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Container(
+              height: 55,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 10,
+                    spreadRadius: 2,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: List.generate(3, (index) {
+                  bool isSelected = _selectedIndex == index;
+                  return GestureDetector(
+                    onTap: () => _onItemTapped(index),
+                    child: AnimatedContainer(
+                      duration: Duration(milliseconds: 300),
+                      curve: Curves.easeOut,
+                      width: 70,
+                      height: isSelected ? 60 : 40,
+                      alignment: Alignment.topCenter,
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          if (isSelected)
+                            Positioned(
+                              top: -20,
+                              left: 0,
+                              right: 0,
+                              child: Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 158, 193, 213),
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromARGB(255, 50, 158, 221),
+                                      blurRadius: 10,
+                                      spreadRadius: -2,
+                                    ),
+                                  ],
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    _getIcon(index),
+                                    color: Colors.white,
+                                    size: 28,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (!isSelected)
+                            Icon(
+                              _getIcon(index),
+                              color: Colors.grey,
+                              size: 28,
+                            ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+              ),
             ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: BottomNavigationBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              selectedItemColor: Colors.blue,
-              unselectedItemColor: Colors.blue.withOpacity(0.6),
-              currentIndex: _selectedIndex,
-              onTap: _onItemTapped,
-              items: const [
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: 'Home',
-                ),
-                BottomNavigationBarItem(
-                  icon: FaIcon(FontAwesomeIcons.newspaper),
-                  label: 'Events',
-                ),
-                BottomNavigationBarItem(
-                  icon: FaIcon(FontAwesomeIcons.user),
-                  label: 'Profile',
-                ),
-              ],
-            ),
-          ),
+          ],
         ),
       ),
     );
+  }
+
+  IconData _getIcon(int index) {
+    switch (index) {
+      case 0:
+        return Icons.home;
+      case 1:
+        return FontAwesomeIcons.newspaper;
+      case 2:
+        return FontAwesomeIcons.user;
+      default:
+        return Icons.circle;
+    }
   }
 }
