@@ -56,6 +56,11 @@ dev_dependencies:
 flutter:
   assets:
     - assets/bg/lawang1000.png
+    - assets/bg/wbabat.png
+    - assets/bg/lumpia.png
+    - assets/bg/kariadi.png
+    - assets/bg/majt.png
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

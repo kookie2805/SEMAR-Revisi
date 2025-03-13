@@ -140,21 +140,70 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Padding(
   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-  child: Container(
-    width: 130,
-    height: 150,
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(20), 
-      boxShadow: [
-        BoxShadow(
-          color: Colors.black.withOpacity(0.1),
-          blurRadius: 10,
-          spreadRadius: 2,
-          offset: Offset(0, 4),
+  child: Row(
+    children: [
+      // Container pertama
+      Container(
+        width: 130,
+        height: 150,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 10,
+              spreadRadius: 2,
+              offset: Offset(0, 4),
+            ),
+          ],
+          image: DecorationImage(image: AssetImage("assets/bg/majt.png"),
+          fit: BoxFit.cover)
         ),
-      ],
-    ),
+      ),
+      SizedBox(width: 20), 
+      // Container kedua
+      Container(
+        width: 130,
+        height: 150,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 10,
+              spreadRadius: 2,
+              offset: Offset(0, 4),
+            ),
+          ],
+          image: DecorationImage(image: AssetImage("assets/bg/lumpia.png"),
+          fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      SizedBox(width: 20),
+      // Container ketiga
+      Container(
+        width: 130,
+        height: 150,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 10,
+              spreadRadius: 2,
+              offset: Offset(0, 4),
+            ),
+          ],
+          image: DecorationImage(image: AssetImage("assets/bg/kariadi.png"),
+          fit: BoxFit.cover
+          ),
+        ),
+      ),
+    ],
   ),
 ),
                 ],
