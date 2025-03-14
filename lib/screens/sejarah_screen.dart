@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DestinasiScreen extends StatelessWidget {
+class SejarahScreen extends StatelessWidget {
   
 
   @override
@@ -70,7 +70,7 @@ class DestinasiScreen extends StatelessWidget {
 
                   // Judul kategori
                   Text(
-                    "Destinasi",
+                    "Tempat Bersejarah",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

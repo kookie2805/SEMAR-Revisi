@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'destinasi_screen.dart'; // Pastikan file destinasi_screen.dart sudah dibuat
+import 'package:semar/screens/kuliner_screen.dart';
+import 'package:semar/screens/layanan_screnn.dart';
+import 'package:semar/screens/sejarah_screen.dart';
+import 'destinasi_screen.dart';
+import 'package:semar/screens/callcenter_screen.dart'; // Pastikan file destinasi_screen.dart sudah dibuat
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -116,14 +120,48 @@ class HomeScreen extends StatelessWidget {
                             },
                             child: buildMenuItem("Destinasi", Icons.map),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 11.3),
-                            child: buildMenuItem("Tempat Bersejarah", Icons.map_outlined),
-                          ),
+                          InkWell(
+   onTap: () {
+      Navigator.push(
+         context,
+         MaterialPageRoute(builder: (context) => SejarahScreen()),
+      );
+   },
+   child: Padding(
+      padding: EdgeInsets.only(top: 11.3), // Menambahkan padding di atas
+      child: buildMenuItem("Tempat Bersejarah", Icons.map_outlined),
+   ),
+),
+
+                          
                           buildMenuItem("Disukai", Icons.favorite),
-                          buildMenuItem("Kuliner", Icons.restaurant),
-                          buildMenuItem("Layanan Publik", Icons.public),
-                          buildMenuItem("Call Center", Icons.phone),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => KulinerScreen()),
+                              );
+                            },
+                            child: buildMenuItem("Kuliner", Icons.map),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => LayananScreen()),
+                              );
+                            },
+                            child: buildMenuItem("Layanan Publik", Icons.map),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => CallCenterScreen()),
+                              );
+                            },
+                            child: buildMenuItem("Call Center", Icons.phone),
+                          ),
                         ],
                       ),
                     ),
