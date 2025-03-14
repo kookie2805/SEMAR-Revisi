@@ -54,6 +54,11 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/Poppins-Regular.ttf
+        - asset: assets/Poppins-SemiBold.ttf
   assets:
     - assets/bg/lawang1000.png
     - assets/bg/wbabat.png

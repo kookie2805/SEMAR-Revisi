@@ -49,8 +49,9 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           "SEMAR",
                           style: TextStyle(
+                            fontFamily: 'Poppins', // Tambahkan Poppins
                             fontSize: 48,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
                             color: Color(0xFF275E76),
                             shadows: [
                               Shadow(
@@ -66,8 +67,9 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             "Seputar Semarang",
                             style: TextStyle(
+                              fontFamily: 'Poppins', // Tambahkan Poppins
                               fontSize: 22,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                               color: Color(0xFF275E76),
                               shadows: [
                                 Shadow(
@@ -121,19 +123,17 @@ class HomeScreen extends StatelessWidget {
                             child: buildMenuItem("Destinasi", Icons.map),
                           ),
                           InkWell(
-   onTap: () {
-      Navigator.push(
-         context,
-         MaterialPageRoute(builder: (context) => SejarahScreen()),
-      );
-   },
-   child: Padding(
-      padding: EdgeInsets.only(top: 11.3), // Menambahkan padding di atas
-      child: buildMenuItem("Tempat Bersejarah", Icons.map_outlined),
-   ),
-),
-
-                          
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => SejarahScreen()),
+                              );
+                            },
+                            child: Padding(
+                              padding: EdgeInsets.only(top: 11.3), // Menambahkan padding di atas
+                              child: buildMenuItem("Tempat Bersejarah", Icons.map_outlined),
+                            ),
+                          ),
                           buildMenuItem("Disukai", Icons.favorite),
                           InkWell(
                             onTap: () {
@@ -173,6 +173,7 @@ class HomeScreen extends StatelessWidget {
                     child: Text(
                       "Galeri",
                       style: TextStyle(
+                        fontFamily: 'Poppins', // Tambahkan Poppins
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF275E76),
@@ -201,14 +202,6 @@ class HomeScreen extends StatelessWidget {
                             margin: EdgeInsets.only(right: 20),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.3),
-                                  blurRadius: 10,
-                                  spreadRadius: 2,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
                               image: DecorationImage(
                                 image: AssetImage("assets/bg/majt.png"),
                                 fit: BoxFit.cover,
@@ -220,15 +213,7 @@ class HomeScreen extends StatelessWidget {
                             width: 130,
                             margin: EdgeInsets.only(right: 20),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.3),
-                                  blurRadius: 10,
-                                  spreadRadius: 2,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
+                              borderRadius: BorderRadius.circular(20),                             
                               image: DecorationImage(
                                 image: AssetImage("assets/bg/lumpia.png"),
                                 fit: BoxFit.cover,
@@ -241,14 +226,6 @@ class HomeScreen extends StatelessWidget {
                             margin: EdgeInsets.only(right: 20),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.3),
-                                  blurRadius: 10,
-                                  spreadRadius: 2,
-                                  offset: Offset(0, 4),
-                                ),
-                              ],
                               image: DecorationImage(
                                 image: AssetImage("assets/bg/kariadi.png"),
                                 fit: BoxFit.cover,
@@ -287,6 +264,7 @@ class HomeScreen extends StatelessWidget {
           title,
           textAlign: TextAlign.center,
           style: TextStyle(
+            fontFamily: 'Poppins', // Tambahkan Poppins
             fontSize: 12,
             fontWeight: FontWeight.bold,
             color: Color(0xFF275E76),
