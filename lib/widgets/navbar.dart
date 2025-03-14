@@ -111,7 +111,7 @@ class _NavbarState extends State<Navbar> {
   IconData _getIcon(int index) {
     switch (index) {
       case 0:
-        return Icons.home;
+        return FontAwesomeIcons.home;
       case 1:
         return FontAwesomeIcons.newspaper;
       case 2:
