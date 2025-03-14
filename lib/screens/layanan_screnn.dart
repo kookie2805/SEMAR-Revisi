@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class LayananScreen extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
@@ -61,7 +59,8 @@ class LayananScreen extends StatelessWidget {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Cari Disini",
+                        hintText: "Cari di sini",
+                        hintStyle: TextStyle(fontFamily: 'Poppins'),
                         border: InputBorder.none,
                         icon: Icon(Icons.search, color: Color(0xFF275E76)),
                       ),
@@ -72,6 +71,7 @@ class LayananScreen extends StatelessWidget {
                   Text(
                     "Layanan Publik",
                     style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -84,7 +84,172 @@ class LayananScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
+
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 150),
+                        Text(
+                      "Museum",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.black
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 15),
+
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 150),
+                        Text(
+                      "Rumah Sakit",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.black
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 15),
+
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 150),
+                        Text(
+                      "Tempat Kebugaran",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.black
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 15),
+
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 150),
+                        Text(
+                      "Pemerintahan",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.black
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 15),
+
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 150),
+                        Text(
+                      "Tempat Penginapan",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: Colors.black
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 15),
 
                   // Grid destinasi
                   Expanded(
@@ -96,9 +261,8 @@ class LayananScreen extends StatelessWidget {
                         mainAxisSpacing: 10,
                         childAspectRatio: 0.9,
                       ),
-                
                       itemBuilder: (context, index) {
-                        
+                        return Container(); // Placeholder
                       },
                     ),
                   ),

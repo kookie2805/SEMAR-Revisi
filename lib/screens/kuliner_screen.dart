@@ -62,6 +62,7 @@ class KulinerScreen extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Cari Disini",
+                        hintStyle: TextStyle(fontFamily: 'Poppins'),
                         border: InputBorder.none,
                         icon: Icon(Icons.search, color: Color(0xFF275E76)),
                       ),
@@ -72,6 +73,7 @@ class KulinerScreen extends StatelessWidget {
                   Text(
                     "Kuliner",
                     style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -84,7 +86,133 @@ class KulinerScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 15),
+
+                  Row(
+                    children: [
+                      SizedBox(width: 44),
+                      Container(
+                        width: 130,
+                        padding: EdgeInsets.symmetric(vertical: 70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 25), // Jarak antara kedua container
+
+                      // Container kedua
+                      Container(
+                        width: 130,
+                        padding: EdgeInsets.symmetric(vertical: 70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15),
+
+                  Row(
+                    children: [
+                      SizedBox(width: 44),
+                      Container(
+                        width: 130,
+                        padding: EdgeInsets.symmetric(vertical: 70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 25), // Jarak antara kedua container
+
+                      // Container kedua
+                      Container(
+                        width: 130,
+                        padding: EdgeInsets.symmetric(vertical: 70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15),
+
+                  Row(
+                    children: [
+                      SizedBox(width: 44),
+                      Container(
+                        width: 130,
+                        padding: EdgeInsets.symmetric(vertical: 70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 25), // Jarak antara kedua container
+
+                      // Container kedua
+                      Container(
+                        width: 130,
+                        padding: EdgeInsets.symmetric(vertical: 70),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15),
 
                   // Grid destinasi
                   Expanded(

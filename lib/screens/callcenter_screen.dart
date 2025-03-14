@@ -18,10 +18,9 @@ class CallCenterScreen extends StatelessWidget {
             ),
           ),
           // Overlay warna
-          Container(
+         Container(
             width: double.infinity,
-            height: double.infinity,
-            color: Colors.white.withOpacity(0.6),
+            color: Color(0xFFFFF2DA).withOpacity(0.6),
           ),
           SafeArea(
             child: Padding(
@@ -58,6 +57,7 @@ class CallCenterScreen extends StatelessWidget {
                           child: TextField(
                             decoration: InputDecoration(
                               hintText: "Cari Disini",
+                              hintStyle: TextStyle(fontFamily: 'Poppins'),
                               border: InputBorder.none,
                             ),
                           ),
@@ -71,6 +71,7 @@ class CallCenterScreen extends StatelessWidget {
                   Text(
                     "Call Center",
                     style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -133,6 +134,7 @@ class CallCenterScreen extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
+                fontFamily: 'Poppins',
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
