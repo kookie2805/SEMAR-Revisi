@@ -61,7 +61,7 @@ class DestinasiScreen extends StatelessWidget {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Cari Disini",
+                        hintText: "Cari di sini",
                         hintStyle: TextStyle(fontFamily: 'Poppins'),
                         border: InputBorder.none,
                         icon: Icon(Icons.search, color: Color(0xFF275E76)),

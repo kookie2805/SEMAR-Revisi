@@ -86,170 +86,183 @@ class LayananScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
 
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(25),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 150),
-                        Text(
-                      "Museum",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: Colors.black
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 15),
+                  Expanded(
+  child: Column(
+    children: [
+      buildLayananItem("Museum", null),
+      buildLayananItem("Rumah Sakit", null),
+      buildLayananItem("Tempat Kebugaran", null),
+      buildLayananItem("Pemerintahan", null),
+      buildLayananItem("Tempat Penginapan", null),
+    ],
+  ),
+),
 
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(25),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 150),
-                        Text(
-                      "Rumah Sakit",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: Colors.black
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 15),
 
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(25),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 150),
-                        Text(
-                      "Tempat Kebugaran",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: Colors.black
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 15),
+                  // Container(
+                  //   width: double.infinity,
+                  //   padding: EdgeInsets.all(25),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         color: Colors.black.withOpacity(0.1),
+                  //         blurRadius: 10,
+                  //         spreadRadius: 2,
+                  //         offset: Offset(0, 4),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   child: Row(
+                  //     children: [
+                  //       SizedBox(width: 150),
+                  //       Text(
+                  //     "Museum",
+                  //     style: TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 16,
+                  //       color: Colors.black
+                  //     ),
+                  //     textAlign: TextAlign.center,
+                  //   ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // SizedBox(height: 15),
 
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(25),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 150),
-                        Text(
-                      "Pemerintahan",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: Colors.black
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 15),
+                  // Container(
+                  //   width: double.infinity,
+                  //   padding: EdgeInsets.all(25),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         color: Colors.black.withOpacity(0.1),
+                  //         blurRadius: 10,
+                  //         spreadRadius: 2,
+                  //         offset: Offset(0, 4),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   child: Row(
+                  //     children: [
+                  //       SizedBox(width: 150),
+                  //       Text(
+                  //     "Rumah Sakit",
+                  //     style: TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 16,
+                  //       color: Colors.black
+                  //     ),
+                  //     textAlign: TextAlign.center,
+                  //   ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // SizedBox(height: 15),
 
-                  Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.all(25),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        SizedBox(width: 150),
-                        Text(
-                      "Tempat Penginapan",
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: Colors.black
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 15),
+                  // Container(
+                  //   width: double.infinity,
+                  //   padding: EdgeInsets.all(25),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         color: Colors.black.withOpacity(0.1),
+                  //         blurRadius: 10,
+                  //         spreadRadius: 2,
+                  //         offset: Offset(0, 4),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   child: Row(
+                  //     children: [
+                  //       SizedBox(width: 150),
+                  //       Text(
+                  //     "Tempat Kebugaran",
+                  //     style: TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 16,
+                  //       color: Colors.black
+                  //     ),
+                  //     textAlign: TextAlign.center,
+                  //   ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // SizedBox(height: 15),
+
+                  // Container(
+                  //   width: double.infinity,
+                  //   padding: EdgeInsets.all(25),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         color: Colors.black.withOpacity(0.1),
+                  //         blurRadius: 10,
+                  //         spreadRadius: 2,
+                  //         offset: Offset(0, 4),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   child: Row(
+                  //     children: [
+                  //       SizedBox(width: 150),
+                  //       Text(
+                  //     "Pemerintahan",
+                  //     style: TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 16,
+                  //       color: Colors.black
+                  //     ),
+                  //     textAlign: TextAlign.center,
+                  //   ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // SizedBox(height: 15),
+
+                  // Container(
+                  //   width: double.infinity,
+                  //   padding: EdgeInsets.all(25),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //         color: Colors.black.withOpacity(0.1),
+                  //         blurRadius: 10,
+                  //         spreadRadius: 2,
+                  //         offset: Offset(0, 4),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   child: Row(
+                  //     children: [
+                  //       SizedBox(width: 150),
+                  //       Text(
+                  //     "Tempat Penginapan",
+                  //     style: TextStyle(
+                  //       fontFamily: 'Poppins',
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 14,
+                  //       color: Colors.black
+                  //     ),
+                  //     textAlign: TextAlign.center,
+                  //   ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // SizedBox(height: 15),
 
                   // Grid destinasi
                   Expanded(
@@ -276,43 +289,37 @@ class LayananScreen extends StatelessWidget {
   }
 
   // Widget untuk item destinasi
-  Widget _buildDestinasiItem(String title, String imagePath) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: Stack(
-        children: [
-          Image.asset(
-            imagePath,
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
+  Widget buildLayananItem(String title, String? imagePath) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 15),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            blurRadius: 5,
+            offset: Offset(0, 2),
           ),
-          Container(
-            alignment: Alignment.bottomCenter,
-            padding: EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.black.withOpacity(0),
-                  Colors.black.withOpacity(0.7),
-                ],
-              ),
+        ],
+      ),
+      child: Row(
+        children: [
+          if (imagePath != null)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(imagePath, width: 40, height: 40, fit: BoxFit.cover),
             ),
+          if (imagePath != null) SizedBox(width: 10),
+          Expanded(
             child: Text(
               title,
               style: TextStyle(
+                fontFamily: 'Poppins',
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
-                shadows: [
-                  Shadow(
-                    color: Colors.black.withOpacity(0.8),
-                    blurRadius: 10,
-                    offset: Offset(0, 4),
-                  ),
-                ],
+                color: Colors.black,
               ),
             ),
           ),

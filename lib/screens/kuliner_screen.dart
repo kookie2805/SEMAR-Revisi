@@ -61,7 +61,7 @@ class KulinerScreen extends StatelessWidget {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Cari Disini",
+                        hintText: "Cari di sini",
                         hintStyle: TextStyle(fontFamily: 'Poppins'),
                         border: InputBorder.none,
                         icon: Icon(Icons.search, color: Color(0xFF275E76)),
@@ -90,7 +90,7 @@ class KulinerScreen extends StatelessWidget {
 
                   Row(
                     children: [
-                      SizedBox(width: 44),
+                      SizedBox(width: 35),
                       Container(
                         width: 130,
                         padding: EdgeInsets.symmetric(vertical: 70),
@@ -107,7 +107,7 @@ class KulinerScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(width: 25), // Jarak antara kedua container
+                      SizedBox(width:50), // Jarak antara kedua container
 
                       // Container kedua
                       Container(
@@ -130,89 +130,89 @@ class KulinerScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 15),
 
-                  Row(
-                    children: [
-                      SizedBox(width: 44),
-                      Container(
-                        width: 130,
-                        padding: EdgeInsets.symmetric(vertical: 70),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 10,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 25), // Jarak antara kedua container
+                  // Row(
+                  //   children: [
+                  //     SizedBox(width: 44),
+                  //     Container(
+                  //       width: 130,
+                  //       padding: EdgeInsets.symmetric(vertical: 70),
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         boxShadow: [
+                  //           BoxShadow(
+                  //             color: Colors.black.withOpacity(0.1),
+                  //             blurRadius: 10,
+                  //             spreadRadius: 2,
+                  //             offset: Offset(0, 4),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 25), // Jarak antara kedua container
 
-                      // Container kedua
-                      Container(
-                        width: 130,
-                        padding: EdgeInsets.symmetric(vertical: 70),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 10,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 15),
+                  //     // Container kedua
+                  //     Container(
+                  //       width: 130,
+                  //       padding: EdgeInsets.symmetric(vertical: 70),
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         boxShadow: [
+                  //           BoxShadow(
+                  //             color: Colors.black.withOpacity(0.1),
+                  //             blurRadius: 10,
+                  //             spreadRadius: 2,
+                  //             offset: Offset(0, 4),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // SizedBox(height: 15),
 
-                  Row(
-                    children: [
-                      SizedBox(width: 44),
-                      Container(
-                        width: 130,
-                        padding: EdgeInsets.symmetric(vertical: 70),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 10,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 25), // Jarak antara kedua container
+                  // Row(
+                  //   children: [
+                  //     SizedBox(width: 44),
+                  //     Container(
+                  //       width: 130,
+                  //       padding: EdgeInsets.symmetric(vertical: 70),
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         boxShadow: [
+                  //           BoxShadow(
+                  //             color: Colors.black.withOpacity(0.1),
+                  //             blurRadius: 10,
+                  //             spreadRadius: 2,
+                  //             offset: Offset(0, 4),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 25), // Jarak antara kedua container
 
-                      // Container kedua
-                      Container(
-                        width: 130,
-                        padding: EdgeInsets.symmetric(vertical: 70),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              blurRadius: 10,
-                              spreadRadius: 2,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 15),
+                  //     // Container kedua
+                  //     Container(
+                  //       width: 130,
+                  //       padding: EdgeInsets.symmetric(vertical: 70),
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         boxShadow: [
+                  //           BoxShadow(
+                  //             color: Colors.black.withOpacity(0.1),
+                  //             blurRadius: 10,
+                  //             spreadRadius: 2,
+                  //             offset: Offset(0, 4),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // SizedBox(height: 15),
 
                   // Grid destinasi
                   Expanded(

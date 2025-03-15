@@ -56,7 +56,7 @@ class CallCenterScreen extends StatelessWidget {
                         Expanded(
                           child: TextField(
                             decoration: InputDecoration(
-                              hintText: "Cari Disini",
+                              hintText: "Cari di sini",
                               hintStyle: TextStyle(fontFamily: 'Poppins'),
                               border: InputBorder.none,
                             ),
@@ -88,7 +88,7 @@ class CallCenterScreen extends StatelessWidget {
 
                   // Daftar Call Center
                   Expanded(
-                    child: ListView(
+                    child: Column(
                       children: [
                         buildCallCenterItem("Pemadam Kebakaran", null),
                         buildCallCenterItem("Polisi", null),
