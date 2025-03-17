@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:semar/widgets/custom_navbar.dart';
+import 'package:semar/widgets/navbar.dart';
 
 class KulinerScreen extends StatelessWidget {
   
@@ -215,26 +217,20 @@ class KulinerScreen extends StatelessWidget {
                   // SizedBox(height: 15),
 
                   // Grid destinasi
-                  Expanded(
-                    child: GridView.builder(
-                      padding: EdgeInsets.only(top: 10),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
-                        childAspectRatio: 0.9,
-                      ),
-                
-                      itemBuilder: (context, index) {
-                        
-                      },
-                    ),
-                  ),
                 ],
               ),
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: CustomNavbar(
+        selectedIndex: -1, // ✅ Tidak ada opsi navbar yang dipilih
+        onItemTapped: (index) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => Navbar(selectedIndex: index)),
+          );
+        },
       ),
     );
   }

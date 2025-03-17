@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:semar/widgets/custom_navbar.dart'; // Import CustomNavbar
+import 'package:semar/widgets/navbar.dart'; // Import Navbar utama jika perlu
 
 class SejarahScreen extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
@@ -37,7 +37,7 @@ class SejarahScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Tombol kembali
+                  // Tombol kembali ke halaman sebelumnya
                   IconButton(
                     icon: Icon(Icons.arrow_back, color: Colors.black),
                     onPressed: () => Navigator.pop(context),
@@ -88,32 +88,26 @@ class SejarahScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
 
-                  // Grid destinasi
-                  Expanded(
-                    child: GridView.builder(
-                      padding: EdgeInsets.only(top: 10),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
-                        childAspectRatio: 0.9,
-                      ),
-                
-                      itemBuilder: (context, index) {
-                        
-                      },
-                    ),
-                  ),
+                 
                 ],
               ),
             ),
           ),
         ],
       ),
+      bottomNavigationBar: CustomNavbar(
+        selectedIndex: -1, // ✅ Tidak ada opsi navbar yang dipilih
+        onItemTapped: (index) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => Navbar(selectedIndex: index)),
+          );
+        },
+      ),
     );
   }
 
-  // Widget untuk item destinasi
+  // Widget untuk item sejarah
   Widget _buildDestinasiItem(String title, String imagePath) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),

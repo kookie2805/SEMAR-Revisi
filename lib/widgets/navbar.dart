@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../screens/home_screen.dart';
+import 'package:semar/screens/profile_screen.dart'; 
 
 class Navbar extends StatefulWidget {
+  final int selectedIndex;
+
+  Navbar({this.selectedIndex = 0});
+
   @override
   _NavbarState createState() => _NavbarState();
 }
@@ -10,10 +15,16 @@ class Navbar extends StatefulWidget {
 class _NavbarState extends State<Navbar> {
   int _selectedIndex = 0;
 
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.selectedIndex;
+  }
+
   static final List<Widget> _pages = [
     HomeScreen(),
     Center(child: Text("Events Page")),
-    Center(child: Text("Profile Page")),
+    ProfileScreen(), // Gunakan ProfileScreen di sini
   ];
 
   void _onItemTapped(int index) {
@@ -26,7 +37,10 @@ class _NavbarState extends State<Navbar> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: _pages[_selectedIndex],
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pages,
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: Stack(
@@ -51,7 +65,9 @@ class _NavbarState extends State<Navbar> {
                 children: List.generate(3, (index) {
                   bool isSelected = _selectedIndex == index;
                   return GestureDetector(
-                    onTap: () => _onItemTapped(index),
+                    onTap: () {
+                      _onItemTapped(index);
+                    },
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 300),
                       curve: Curves.easeOut,
@@ -120,4 +136,11 @@ class _NavbarState extends State<Navbar> {
         return Icons.circle;
     }
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Navbar(),
+  ));
 }

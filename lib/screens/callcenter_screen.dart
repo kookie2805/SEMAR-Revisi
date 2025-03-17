@@ -1,9 +1,27 @@
+// callcenter_screen.dart
 import 'package:flutter/material.dart';
+import 'package:semar/widgets/custom_navbar.dart';
+import 'package:semar/widgets/navbar.dart';
+import 'package:semar/screens/home_screen.dart'; // Import HomeScreen
 
-class CallCenterScreen extends StatelessWidget {
+class CallCenterScreen extends StatefulWidget {
+  @override
+  _CallCenterScreenState createState() => _CallCenterScreenState();
+}
+
+class _CallCenterScreenState extends State<CallCenterScreen> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: Stack(
         children: [
           // Background
@@ -12,13 +30,13 @@ class CallCenterScreen extends StatelessWidget {
             height: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/bg/lawang1000.png"), // Sesuaikan dengan gambar yang digunakan
+                image: AssetImage("assets/bg/lawang1000.png"),
                 fit: BoxFit.cover,
               ),
             ),
           ),
           // Overlay warna
-         Container(
+          Container(
             width: double.infinity,
             color: Color(0xFFFFF2DA).withOpacity(0.6),
           ),
@@ -104,6 +122,17 @@ class CallCenterScreen extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: CustomNavbar(
+  selectedIndex: 5, // Sesuai dengan Call Center
+  onItemTapped: (index) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => Navbar(selectedIndex: index)),
+    );
+  },
+),
+
+
     );
   }
 
