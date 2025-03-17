@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:semar/widgets/custom_navbar.dart'; 
 import 'package:semar/widgets/navbar.dart'; 
 
-class DestinasiScreen extends StatelessWidget {
+class DisukaiScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
@@ -71,7 +71,7 @@ class DestinasiScreen extends StatelessWidget {
 
                   // Judul kategori
                   Text(
-                    "Destinasi",
+                    "Disukai",
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 24,
@@ -106,7 +106,7 @@ class DestinasiScreen extends StatelessWidget {
   }
 
   // Widget untuk item destinasi
-  Widget _buildDestinasiItem(String title, String imagePath) {
+  Widget _buildDisukaiItem(String title, String imagePath) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Stack(

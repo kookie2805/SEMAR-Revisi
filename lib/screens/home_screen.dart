@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:semar/screens/kuliner_screen.dart';
 import 'package:semar/screens/layanan_screnn.dart';
 import 'package:semar/screens/sejarah_screen.dart';
+import 'package:semar/screens/disukai_screen.dart';
 import 'destinasi_screen.dart';
 import 'package:semar/screens/callcenter_screen.dart'; // Pastikan file destinasi_screen.dart sudah dibuat
 
@@ -134,7 +135,15 @@ class HomeScreen extends StatelessWidget {
                               child: buildMenuItem("Tempat Bersejarah", Icons.map_outlined),
                             ),
                           ),
-                          buildMenuItem("Disukai", Icons.favorite),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => DisukaiScreen()),
+                              );
+                            },
+                            child: buildMenuItem("Disukai", Icons.favorite),
+                          ),
                           InkWell(
                             onTap: () {
                               Navigator.push(
