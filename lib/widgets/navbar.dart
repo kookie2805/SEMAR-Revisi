@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:semar/screens/dashboard.dart';
 import '../screens/home_screen.dart';
 import 'package:semar/screens/profile_screen.dart'; 
 
@@ -23,7 +24,7 @@ class _NavbarState extends State<Navbar> {
 
   static final List<Widget> _pages = [
     HomeScreen(),
-    Center(child: Text("Events Page")),
+    DashboardPage(),
     ProfileScreen(), // Gunakan ProfileScreen di sini
   ];
 
